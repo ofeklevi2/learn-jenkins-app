@@ -20,5 +20,15 @@ pipeline {
                 '''
             }
         }
+
+        stage('Test') {
+            sh '''
+                echo "Test stage"
+
+                if[ -e 'index.html]; then
+                    echo 'index.gtml exists'
+                fi
+            '''
+        }
     }
 }
