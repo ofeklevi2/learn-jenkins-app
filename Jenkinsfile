@@ -26,7 +26,7 @@ pipeline {
                 sh '''
                     echo "Test stage"
 
-                    if[ -e 'index.html]; then
+                    if [ -e 'index.html' ]; then
                         echo 'index.gtml exists'
                     fi
                 '''
