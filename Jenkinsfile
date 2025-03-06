@@ -36,7 +36,6 @@ pipeline {
                 '''
             }
         }
-    }
 
         stage('E2E') {
             agent {
@@ -52,8 +51,8 @@ pipeline {
                     npx playwrite test
                 '''
             }
-        }
-    
+        }        
+    }
 
     post {
         always {
