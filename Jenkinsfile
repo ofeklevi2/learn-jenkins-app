@@ -100,11 +100,13 @@ pipeline {
                     reuseNode true
                 }
             }
+
+            environment {
+                CI_ENVIRONMENT_URL = 'https://peppy-bunny-d8486e.netlify.app'
+            }
+
             steps {
                 sh '''
-                    npm install serve
-                    node_modules/.bin/serve -s build &
-                    sleep 13
                     npx playwright test --reporter=html
                 '''
             }
